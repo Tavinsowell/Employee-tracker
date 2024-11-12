@@ -84,6 +84,7 @@ The database schema consists of three tables: `department`, `role`, and `employe
 - Inquirer.js
 - dotenv
 
-## License
+## Contribution
 
-This project is licensed under the MIT License.
+email: Tavinsowell@gmail.com
+github: https://github.com/Tavinsowell
