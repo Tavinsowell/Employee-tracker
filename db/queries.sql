@@ -14,13 +14,13 @@ JOIN department ON role.department_id = department.id
 LEFT JOIN employee AS manager ON employee.manager_id = manager.id;
 
 -- Add a department
-INSERT INTO department (name) VALUES (?);
+INSERT INTO department (name) VALUES ($1);
 
 -- Add a role
-INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?);
+INSERT INTO role (title, salary, department_id) VALUES ($1, $2, $3);
 
 -- Add an employee
-INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?);
+INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ($1, $2, $3, $4);
 
 -- Update an employee role
-UPDATE employee SET role_id = ? WHERE id = ?;
+UPDATE employee SET role_id = $1 WHERE id = $2;

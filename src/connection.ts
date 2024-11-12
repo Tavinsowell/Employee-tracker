@@ -24,4 +24,11 @@ const connectToDb = async () => {
   }
 };
 
+// Ensure the pool is closed when the application exits
+process.on('exit', () => {
+  pool.end(() => {
+    console.log('Pool has ended.');
+  });
+});
+
 export { pool, connectToDb };
